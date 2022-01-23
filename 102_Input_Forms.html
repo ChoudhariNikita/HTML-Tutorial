@@ -1,0 +1,47 @@
+<!-- 
+        In HTML we can only define these elements.
+        For performing actions on them we need to use javascript.
+        
+        <Form> ==> wrapper for bunch of inputs
+
+        input ==> use for taking input
+              ==> input of type :
+                     text, password, date, email, range, 
+                     file, search, reset, tel, time, 
+                     url, week, color, etc.
+                     
+        textarea ==> get entire block for writing text
+        checkbox ==> all checkboxes can be selected
+        radio btn ==> if radio btn have same name, one of them can be selected
+    -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Input and Forms</title>
+    <meta name='Description' content='This is awesome website!!'>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" value="Enter Username" /><br /><br />
+        <input type="password" placeholder="Enter password" /> <br /><br />
+        <input type="date" />
+        <input type="range" /> <br /><br />
+        <input type="file" /> <br /><br />
+        <input type="checkbox" />
+        <input type="checkbox" /><br /><br />
+        <input name="btn1" type="radio" />
+        <input name="btn1" type="radio" /> <br /><br />
+        <input type="submit" /> <br /> <br />
+
+        <textarea rows="10" cols="30">
+            Enter a paragraph
+        </textarea>
+    </form>
+</body>
+
+</html>
