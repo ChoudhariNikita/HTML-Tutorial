@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="mylogin.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     /* background-color: #001737;*/
+      /*margin-top: -10px;*/
+      margin-right: 50px;
+
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+     /* background-color: #f5f5f5;*/
+      margin-right: 150px;
+      margin-top:20px ;
+      font-size: 20px;
+      font-weight: bold;
+
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: white;
+      padding: 0px 20px;
+    }
+
+    /* CSS for main element */
+    .intro {
+      margin-top:-100px;
+
+     /* margin-right:5000px;*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 620px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), 
+url("coverpage.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      margin-right: 200px;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+      margin-right: 200px;
+    }
+
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 200px;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+    .header .noticebutton button {
+      background-color: gray;
+     
+      margin-bottom: 10px;
+      color: #000;
+      padding: 5px 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    /*.gpplogo img{
+      width: 100px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }*/
+
+    .sidenav {
+  height: 545px;
+  width: 160px;
+  position: absolute;
+
+  z-index: 1;
+  top: 0;
+  right:0;
+  background-color:#001737;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: white;
+
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:white;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/*@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
+  </style>
+</head>
+
+<body>
+  <div class="sidenav">
+    <h2><center>Notice</center></h2>
+  <marquee direction="up">
+<p>This is a notice</P>
+
+<p>Lorem Ipsum is simply dummy text of the printing and type setting industry. </p>
+
+</marquee>
+<div>  
+<dialog id="myFirstDialog" style="width:50%;background-color:#F4FFEF;border:1px dotted black;">  
+<p><q>orem Ipsum is simply dummy text of the printing and typesetting industry  
+</q> - <cite>GPP</cite></p>  
+<button id="hide">Close</button>  
+</dialog>  
+<button id="show">Read More..</button>  
+</div>  
+  
+<!-- JavaScript to provide the "Show/Close" functionality -->  
+<script type="text/JavaScript">  
+(function() {    
+    var dialog = document.getElementById('myFirstDialog');    
+    document.getElementById('show').onclick = function() {    
+        dialog.show();    
+    };    
+    document.getElementById('hide').onclick = function() {    
+        dialog.close();    
+    };    
+})();   
+</script> 
+</div>
+  <header class="header">
+ <!-- <div class="gpplogo">
+<img src="logo.png" alt="me">
+</div> -->
+<div class="noticebutton">
+
+ 
+
+ 
+</div>
+    <nav class="nav-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+     
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>GOVERNMENT POLYTECHNIC PUNE</h1>
+      <p>we build golden future of students</p>
+      <button>More Details</button>
+    </div>
+    <div class="achievements">
+      <div class="work">
+        <i class="fas fa-atom"></i>
+        <p class="work-heading">Structure</p>
+        <p class="work-text">The institute lays particular focus on bringing the curriculum in tandem 
+with current industrial requirements and developments. With employment being an equally crucial aspect
+ of modern education , the institute is particularly keen on keeping a persistent link between academics 
+and industrial realities so as to make students proficient to meet the demands of the industry. 
+Towards this purpose it has formed various committees with substantial industrial representation.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-skiing"></i>
+        <p class="work-heading">Mission</p>
+        <p class="work-text">Update curriculum in association with stakeholders
+Modernize infrastructure & facilities
+Set up strategic alliance with industries
+Enhance e-governance
+Continuous development of faculty & staff.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-ethernet"></i>
+        <p class="work-heading">Location</p>
+        <p class="work-text">The institute is located in India's second largest industrial town - 
+Pune, particularly known for its thriving automobile industry and software business. 
+The Government Polytechnic is located on Rajbhavan Road near Pune University campus hardly 7 k.m
+ from the Pune railway station and 20 k.m from the Airport.</p>
+      </div>
+    </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>About the College</h2>
+        <p>
+The Government Polytechnic, Pune, was established in the year 1957. Thirty seven years later, in May 1994, 
+the institute was awarded academic autonomy. Today it houses in its 28 acre campus, a main building,
+ students hostels, classrooms for various faculties including Electronic Computers, Library, Canteen,
+ post office and other facilities and has the capacity to groom more than 300 students in various 
+engineering fields every year.
+facilities and has the capacity to groom more than 300 students in various engineering fields every year.
+ Over the last four decades, the institute has produced more than 8000 diploma engineers in different
+disciplines, has won several awards in academics as well as socio-cultural activities and on the whole 
+has succeeded in contributing humble positive efforts towards the building of a progressive society.</p>
+      </div>
+      <img src="gpp.jpg" alt="me">
+    </div>
+  </main>
+  <footer class="footer">
+   
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
